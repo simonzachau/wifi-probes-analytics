@@ -6,6 +6,10 @@ def parse_date(state_string):
     return datetime.datetime.strptime(state_string, '%Y-%m-%d %H:%M')
 
 
+def make_legend(capture):
+    return '{} on {:%Y-%m-%d %H:%M}'.format(capture.description, capture.start_date)
+
+
 Capture = namedtuple('Capture', ('filename', 'description', 'start_date'))
 
 commutes = [
