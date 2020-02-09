@@ -22,3 +22,5 @@ ipython_config.py
 *.pcap
 *.csv
 *.csv.*
+*.pyc
+
