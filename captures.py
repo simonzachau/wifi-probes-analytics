@@ -7,7 +7,7 @@ def parse_date(state_string):
 
 
 def make_legend(capture):
-    return '{} on {:%Y-%m-%d %H:%M}'.format(capture.description, capture.start_date)
+    return '{} on {:%Y-%m-%d at %H:%M}'.format(capture.description, capture.start_date)
 
 
 Capture = namedtuple('Capture', ('filename', 'description', 'start_date'))
