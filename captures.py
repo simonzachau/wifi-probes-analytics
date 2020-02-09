@@ -12,7 +12,7 @@ def make_legend(capture):
 
 Capture = namedtuple('Capture', ('filename', 'description', 'start_date'))
 
-commutes = [
+commutes = (
     Capture(
         filename='capture-0-a4.pcap',
         description='trip from Kaufering to Garching Forschungszentrum',
@@ -43,7 +43,7 @@ commutes = [
         description='trip from Kaufering to Garching Forschungszentrum',
         start_date=parse_date('2020-01-20 07:00')
     )
-]
+)
 
 u2_to_messestadt = Capture(
     filename='capture-3-a4.pcap',
@@ -68,3 +68,5 @@ munich_to_dortmund = Capture(
     description='train trip Munich Central Station to Dortmund Central Station',
     start_date=parse_date('2019-12-24 07:21')
 )
+
+all_captures = (*commutes, u2_to_messestadt, u2_to_feldmoching, u6_roundtrip, munich_to_dortmund)
